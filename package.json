@@ -90,8 +90,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=develop webpack-dev-server --history-api-fallback --open --watch --port 3000 --mode development",
-    "build": "webpack -p",
+    "start": "NODE_ENV=develop BACKEND_URL='http://haiku.click' webpack-dev-server --history-api-fallback --open --watch --port 3000 --mode development",
+    "build": "BACKEND_URL='http://haiku.click' webpack -p",
     "watch": "webpack -d --watch",
     "storybook": "start-storybook -p 9001 -c src/storybook/ -s src/",
     "codegen": "apollo-codegen generate 'src/**/*.ts' --target typescript --output ./src/core/types/saleor.ts --schema schema.json"

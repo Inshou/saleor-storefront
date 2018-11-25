@@ -44,7 +44,7 @@ const MainMenu: React.SFC = () => (
               render={() => (
                 <Query
                   query={GET_MAIN_MENU}
-                  fetchPolicy="no-cache"
+                  fetchPolicy="cache-and-network"
                   errorPolicy="all"
                 >
                   {({ loading, error, data }) => {
